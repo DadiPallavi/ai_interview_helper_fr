@@ -1,7 +1,7 @@
 import streamlit as st
 import requests as rq
 st.title("AI Interview preparation helper bot")
-serv_loc="http://127.0.0.1:8000"
+serv_loc= st.secrets["SERV_LOC"]
 with st.form("Details"):
     Topic=st.text_input("enter lang-topic:--")
     level=st.selectbox("choose level",["Easy","Medium","Advanced"])
